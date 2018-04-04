@@ -1,4 +1,12 @@
 #Vue项目-CMS（内容管理系统）
+
+##技术
+html
+vue + vue-router + axios + mint-ui +mui
+webpack + babel + ES6
+
+
+
 #项目结构
 html
 /node_modules---------------项目使用的包

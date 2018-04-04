@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- <div id="app">
+    父组件：{{ msg }}
+    <br>
+           <!-- 子组件  通过组件的v-model将msg数据传递给自己（子组件）
+        v-model做的事情 @input="事件"不用在父组件中指定，自动会帮你指定-->
+    <!-- <myson v-model='msg' ></myson>
+  </div> -->
+
+  <!-- 
+    通过组件的 v-model 将父组件中的msg数据传递给子组件
+
+    组件的v-model做了两件事情：
+    1 给子组件传递props叫做：value
+    2 给子组件传递事件 input
+  -->
+
+<!-- </div>  -->
+<script src="./vue.js"></script>
+<script>
+    // Vue.component("myson",{
+    //           //***1文本框帮绑定自己的数据，文本框数据一变，myValue的值就会改变
+    //   template:`
+    //   <div>
+    //       <input type='text' v-model='mt'>
+    //       <button  @click='ch'>修改数据</button>
+    //    </div>   
+    //   `,
+    //    // 子组件接收props这个属性  value就是msg,默认情况下，传递的props名称为value
+    //     //注意组件通讯，一定不能修改props
+    //   props:['value'],
+    //   data(){
+    //     return {
+    //       mt:this.value
+    //     }
+    //   },
+    //   props:["chiled"],
+    //   methods:{
+    //     ch(){
+    //         //父组件自动传递一个input事件，子组件可以通过$emit()来触发该事件，将this.myValue数据提交给父组件
+    //             //事件点击之后myValue的值一变，就会改变父组件的值
+    //       this.$emit("input",this.mt);
+    //       console.log(this.mt);
+    //     }
+    //   }
+
+    // })
+
+    // new Vue({
+    //   el:"#app",
+    //   data:{
+    //     msg:"我说什么、你就做什么"
+    //   }
+    //  })
+var arr=[];
+const message=[
+  {add:2018,username:"niming"},
+  {add:2018,username:"niming"},
+  {add:2018,username:"niming"},
+  {add:2018,username:"niming"}
+]
+const one=[
+  {add:2018,username:"niming"}
+]
+arr.push(message);
+console.log(arr);
+arr.push(one);
+console.log(arr)
+</script>
+</body>
+
+</html>
